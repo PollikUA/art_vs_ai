@@ -210,7 +210,18 @@ function prevImage() {
 
     document.getElementById("gallery").src = images[current];
 }
+    
+@media (max-width: 768px) {
 
+    .left-image,
+    .right-image {
+        display: none;
+    }
+
+    .content {
+        width: 90%;
+    }
+}
 </script>
 
 </head>

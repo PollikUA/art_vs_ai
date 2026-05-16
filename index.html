@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Art VS AI</title>
+    <style>
+        body { background-color: rgb(255, 0, 166);
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    font-family: Arial;
+
+    color: #000000;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.banner {
+
+    width: 70%;
+
+    display: block;
+
+    margin: auto;
+
+    margin-bottom: 20px;
+    
+    border-radius: 0;
+}
+
+.content {
+
+    background-color: rgb(255, 255, 255);
+
+    padding: 20px;
+
+    width: 70%;
+
+    margin: auto;
+}
+
+.left-image {
+
+    position: fixed;
+
+    left: 20px;
+
+    top: 120px;
+
+    width: 180px;
+}
+
+.right-image {
+
+    position: fixed;
+
+    right: 20px;
+
+    top: 120px;
+
+    width: 180px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+p {
+    font-size: 22px;
+}
+
+img {
+    border-radius: 0;
+}
+
+.columns {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    align-items: flex-start;
+}
+
+.box {
+    width: 48%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.box img {
+
+    width: 100%;
+
+    max-width: 300px;
+
+    height: auto;
+}
+
+.detect-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.text-side {
+
+    width: 50%;
+
+    text-align: left;
+}
+
+.image-side {
+
+    width: 40%;
+}
+
+.image-side img {
+
+    width: 100%;
+
+    border: 2px solid white;
+}
+
+ol {
+
+font-size: 24px;
+
+line-height: 2;
+}
+
+a {
+
+    color:rgb(89, 0, 255);
+
+    font-size: 22px;
+}
+
+
+</style>
+
+<script>
+
+let images = [
+    "art1.jpg",
+    "art2.jpg",
+    "art3.jpg",
+    "art4.jpg",
+    "art5.jpg",
+    "art6.jpg",
+    "art7.jpg",
+    "art8.jpg",
+    "art9.jpg",
+    "art10.jpg"
+];
+let captions = [
+    "Дівчина з перловою сережкою — Ян Вермер(1665)",
+    "Катерина — Тарас Шевченко (1840)",
+    "Зоряна ніч — Ван Гог (1889)",
+    "Крик — Едвард Мунк (1893)",
+    "Американська Готика — (1930)",
+    "Син Людський — (1964)",
+    "Диптих Марлін — Енді Ворлог (1967)",
+    "Обкалидинка манги Наруто — Масаші Кішімото (2004)",
+    "Рохан Кішиба — Хірохіко Аракі (2018)",
+    "Обкладинка мультсеріалу Аркейн (2021)"
+]
+let current = 0;
+
+function nextImage() {
+
+    current++;
+
+    if(current >= images.length) {
+        current = 0;
+    }
+
+    document.getElementById("gallery").src = images[current];
+
+    document.getElementById("caption").innerText = captions[current];
+}
+
+
+function prevImage() {
+
+    current--;
+
+    if(current < 0) {
+        current = images.length - 1;
+    }
+
+    document.getElementById("gallery").src = images[current];
+}
+
+</script>
+
+</head>
+
+<body>
+
+<img src="weird1.gif" class="banner">
+
+<img src="weird2.gif" class="left-image">
+
+<img src="weird3.gif" class="right-image">
+
+<div class="content">
+
+<h1>Людське мистецтво vs ШІ</h1>
+
+<h2>Чи можна вважати ШІ мистецтвом?</h2>
+
+<p>
+Штучний інтелект може генерувати зображення за пару секунд.
+Але чи може він замінити справжню людську творчість?
+</p>
+
+<a href="ai.jpg">
+
+<img src="ai.jpg" width="300">
+
+</a>
+
+<a href="real.jpg">
+
+<img src="real.jpg" width="300">
+
+</a>
+
+<div class="columns">
+
+<div class="box">
+<h2>Як ШІ генерує зображення?</h2>
+<p>Штучний інтелект навчається на великій кількості зображень з інтернету.
+Він аналізує форми, кольори, стилі та деталі, а потім створює нове зображення
+на основі текстового опису користувача.
+Однак ШІ не малює так, як людина.
+Він не має власних емоцій, досвіду чи уяви,
+а працює на основі даних, на яких був навчений.
+</p>
+
+<a href="aicat.jpg">
+<img src="aicat.jpg">
+</a>
+
+<p>Ші генерація</p>
+
+</div>
+
+<div class="box">
+<h2>Як людина створює мистецтво?</h2>
+<p>Люди створюють мистецтво за допомогою власного досвіду, емоцій та уяви.
+Мистецтво народжується з ідей, натхнення, настрою, бажання поділитися особистими переживаннями.
+На відміну від ШІ людина не просто поєднує вже існуючі зображення, а навчається через практику, помилки та власний стиль.
+Саме тому людська творчість є унікальною. 
+Малювання для багатьох людей є способом самовираження та творчості.
+</p>
+
+<a href="pollikuacat.jpg">
+<img src="pollikuacat.jpg">
+</a>
+
+<p>Мій малюнок @PollikUA</p>
+
+</div>
+
+</div>
+
+<div class="detect-section">
+
+<div class="text-side">
+
+<h2>Як відрізнити ШІ від людського арту.</h2>
+<h2>На прикладі цього малюнка:</h2>
+<ol>
+<li>Сережка проходить крізь вухо.</li>
+
+<li>Дивна текстура волосся.</li>
+
+<li>Чокер не має чіткої форми.</li>
+
+<li>Пальці мають дивну довжину, занадто тонкі, а їхнє розташування анатомічно неправильне.</li>
+
+<li>Анатомія плеча та колючиці виглядає деформованою.</li>
+
+<li>Зайве пасмо, яке росте прямо з руки.</li>
+
+<li>Занадто ідеальна текстура зображення.</li>
+</ol>
+</div>
+
+<div class="image-side">
+
+<a href="aigirl.jpg">
+<img src="aigirl.jpg">
+</a>
+
+</div>
+
+</div>
+
+<p>Проте сучасний ШІ постійно розвивається, тому відрізнити його від людської роботи стає дедалі складніше.
+Як розпізнати ШІ зображення, детальніше
+<a href=https://ain.ua/2024/06/27/yak-rozpiznaty-shi-zobrazhennya-9-prostyh-sposobiv-u-2024-roczi>
+
+тут
+
+</a>
+
+<h2>Чим людське мистецтво краще?</h2>
+</p>
+
+<p>Людське мистецтво унікальне, художники вкладають у свої роботи власні емоції та ідеї.
+Кожен художник має власний стиль, який формується через роки навчання. 
+Митці можуть свідомо передавати настрій, символізм та сенс, тоді як ШІ лише генерує на основі даних.
+Щостоліття мистецтво еволіціонує від класичного живопису до цифрового мистецтва.
+</p>
+
+<img id="gallery" src="art1.jpg" width="350">
+<br><br>
+
+<p id="caption">Дівчина з перловою сережкою — Ян Вермер(1665)</p>
+
+<button onclick="prevImage()">←</button>
+
+<button onclick="nextImage()">→</button>
+
+<h2>Висновок</h2>
+<p>Штучний інтелект це інструмент, який можна використовувати для натхнення або навчання. 
+Проте спражня творчість залишається людською. Люди, які генерують зображення за допомогою ШІ,
+не створюють картину повністю самостійно, адже основну роботу за них виконує алгоритм. 
+Малювання потребує багато часу, практики та навчання. Але навіть якщо робота недосконала, вона всеодно залишається щирою. 
+Підтримуйте починаючих художників, адже саме так зʼявляються майбутні митці.
+
+<P>Мої роботи можна знайти тут:</P>
+
+<a href="https://www.instagram.com/pollikua?igsh=eXczODZxdHF1emNz" target="_blank">
+Instagram @PollikUA
+</a>
+
+</p>
+
+</div>
+
+</body>
+
+</html>

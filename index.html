@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>Art VS AI</title>
     <style>
+        @media (max-width: 768px) {
+
+    .left-image,
+    .right-image {
+        display: none;
+    }
+
+    .content {
+        width: 90%;
+    }
+}
         body { background-color: rgb(255, 0, 166);
     background-size: cover;
 
@@ -211,16 +222,6 @@ function prevImage() {
     document.getElementById("gallery").src = images[current];
 }
     
-@media (max-width: 768px) {
-
-    .left-image,
-    .right-image {
-        display: none;
-    }
-
-    .content {
-        width: 90%;
-    }
 }
 </script>
 

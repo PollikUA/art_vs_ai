@@ -190,12 +190,19 @@ let captions = [
     "Крик — Едвард Мунк (1893)",
     "Американська Готика — (1930)",
     "Син Людський — (1964)",
-    "Диптих Марлін — Енді Ворлог (1967)",
+    "Диптих Марлін — Енді Воргол (1967)",
     "Обкалидинка манги Наруто — Масаші Кішімото (2004)",
     "Рохан Кішиба — Хірохіко Аракі (2018)",
     "Обкладинка мультсеріалу Аркейн (2021)"
 ]
 let current = 0;
+
+function updateGallery() {
+
+    document.getElementById("gallery").src = images[current];
+
+    document.getElementById("caption").innerText = captions[current];
+}
 
 function nextImage() {
 
@@ -205,11 +212,8 @@ function nextImage() {
         current = 0;
     }
 
-    document.getElementById("gallery").src = images[current];
-
-    document.getElementById("caption").innerText = captions[current];
+    updateGallery();
 }
-
 
 function prevImage() {
 
@@ -219,11 +223,7 @@ function prevImage() {
         current = images.length - 1;
     }
 
-    document.getElementById("gallery").src = images[current];
-
-    document.getElementById("caption").innerText = captions[current];
-}
-    
+    updateGallery();
 }
 </script>
 
